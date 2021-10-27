@@ -1,9 +1,9 @@
 class BlogUsersController < ApplicationController
-  def user
+  def show
     render 'user'
   end
 
-  def profile
+  def index
     render 'profile'
   end
 end
