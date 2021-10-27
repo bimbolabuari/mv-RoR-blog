@@ -1,25 +1,23 @@
-# README
+# mv-blog-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Microverse exercise on using controllers to handle requests and render views in Rails, Use Ruby Gems as a software packages system, understand Rails naming conventions, use params from browser requests in a safe way.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Rails
 
-* System dependencies
+## Authors
 
-* Configuration
+👤 **Abimbola Buari**
 
-* Database creation
+- GitHub: [@bimbolabuari](https://github.com/bimbolabuari)
+- Twitter: [@bimbolabuari](https://twitter.com/bimbolabuari)
+- LinkedIn: [@bimbolabuari](https://www.linkedin.com/in/bimbolabuari)
 
-* Database initialization
+## 🤝 Contributing
 
-* How to run the test suite
+Contributions, issues, and feature requests are welcome!
 
-* Services (job queues, cache servers, search engines, etc.)
+## Show your support
 
-* Deployment instructions
-
-* ...
-# mv-RoR-blog
+Give a ⭐️ if you like this project!
