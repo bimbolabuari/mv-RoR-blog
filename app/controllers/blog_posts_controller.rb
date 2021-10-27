@@ -1,9 +1,5 @@
 class BlogPostsController < ApplicationController
-  def show
-    render 'post'
-  end
+  def index; end
 
-  def index
-    render 'posts'
-  end
+  def show; end
 end
