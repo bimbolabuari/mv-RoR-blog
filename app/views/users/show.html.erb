@@ -1,1 +1,21 @@
-<h1> This is the user page </h1>
+<section class="show-section">
+  <p><%= @user.photo %></p>
+  <div class="flex">
+    <h2><%= @user.name %></h2>
+    <p>Number of posts: <%= @user.posts_counter %></p>
+  </div>
+  <div class="show-bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  <ul class="show-user-recent-posts">
+    <% @posts.each do |post| %>
+      <li class="show-user-post-item">
+        <h4><%= post.title %></h4>
+        <p><%= post.text %></p>
+        <p>Comments: <%= post.comments_counter %> • Likes: <%= post.likes_counter %></p>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'See all posts', "posts/", class: "buttons" %>
+</section>
