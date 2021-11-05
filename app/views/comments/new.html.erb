@@ -1,4 +1,9 @@
 <div>
+<% flash.each do |msg| %>
+  <div>
+  <%= msg %>
+  </div>
+  <% end %>
   <h2>Add a comment</h2>
   <%= form_with class: "comment-form", scope: :comment, url: "/users/#{params[:user_id]}/posts/#{params[:id]}/comments/", local: true do |f| %>
     <%= f.label :text %>
