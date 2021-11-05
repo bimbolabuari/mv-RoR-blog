@@ -3,7 +3,7 @@
     <li class="list">
       <p class="photo"><%= user.photo %> </p>
       <div class="user-info">
-        <h2><%= user.name %></h2>
+      <%= link_to user.name, "/users/#{user.id}/" %>
         <p class="no_of_posts">Number of posts: <%= user.posts_counter %></p>
       </div>
     </li>

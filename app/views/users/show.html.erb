@@ -11,11 +11,14 @@
   <ul class="show-user-recent-posts">
     <% @posts.each do |post| %>
       <li class="show-user-post-item">
-        <h4><%= post.title %></h4>
-        <p><%= post.text %></p>
-        <p>Comments: <%= post.comments_counter %> • Likes: <%= post.likes_counter %></p>
-      </li>
+      <%= link_to post.title, "/users/#{params[:id]}/posts/#{post.id}" %>
+      <p><%= post.text %></p>
+      <p>Comments: <%= post.comments_counter %> • Likes: <%= post.likes_counter %></p>
+    </li>
     <% end %>
   </ul>
-  <%= link_to 'See all posts', "posts/", class: "buttons" %>
+  <div class="buttons-container">
+    <%= link_to 'Create a post', "/users/#{params[:id]}/posts/new", class: "buttons" %>
+    <%= link_to 'See all posts', "/users/#{params[:id]}/posts/", class: "buttons" %>
+  </div>
 </section>
