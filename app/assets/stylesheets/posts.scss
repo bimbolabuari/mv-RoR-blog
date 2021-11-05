@@ -69,3 +69,8 @@
   border: 3px solid #aaa;
   width: 100%;
 }
+
+.posts-container {
+  display: flex;
+  justify-content: space-evenly;
+}
