@@ -1,0 +1,10 @@
+<section>
+  <h1>Create new post</h1>
+  <%= form_with class: "posts-form", scope: :post, url: "/users/#{params[:user_id]}/posts", local: true do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+    <%= f.submit %>
+  <% end %>
+</section>
