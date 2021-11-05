@@ -11,4 +11,10 @@
       <p><%= @users.find(comment.author_id).name %>: <%= comment.text %></p>
     <% end %>
   </div>
+  <div class="posts-container">
+  <%= form_with scope: :like, url: "/users/#{params[:user_id]}/posts/#{params[:id]}/likes/", local: true do |f| %>
+    <%= f.submit 'Like', class: "buttons" %>
+  <% end %>
+  <%= link_to 'Add a comment', "/users/#{params[:user_id]}/posts/#{params[:id]}/comments/new/" %>
+</div>
 </div>
