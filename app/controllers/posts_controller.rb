@@ -18,13 +18,18 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post.title = params[:post]['title']
-    @post.text = params[:post]['text']
-
-    if @post.save
-      redirect_to "/users/#{params[:user_id]}/posts/#{@post.id}"
-    else
-      redirect_to "/users/#{params[:user_id]}/posts/new"
+    if user_signed_in?
+      @user = current_user
+      @post = @user.posts.create(params.require(:post).permit(:title, :text))
+      if @post.save
+        flash[:notice] = 'Post saved successfully'
+        redirect_to user_post_url
+      else
+        flash.now[:error] = 'Error: Post could not be saved'
+        render :new, locals: { post: @post }
+      end
+      else
+      flash.now[:error] = 'Error: Please sign up to make a posts.'
+      redirect_to root_path
     end
-  end
 end
