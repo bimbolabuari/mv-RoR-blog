@@ -1,4 +1,9 @@
 <div class="post-show">
+<% flash.each do |msg| %>
+  <div>
+  <%= msg %>
+  </div>
+  <% end %>
   <div>
     <div class="post-info">
       <h2><%= @post.title %><span> by <%= @user.name %></span></h2>

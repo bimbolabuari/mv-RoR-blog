@@ -1,4 +1,9 @@
 <div class="list">
+<% flash.each do |msg| %>
+  <div>
+  <%= msg %>
+  </div>
+  <% end %>
   <p class="photo"><%= @user.photo %></p>
   <div class="flex">
     <h2><%= @user.name %></h2>

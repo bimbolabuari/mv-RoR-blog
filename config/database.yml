@@ -61,6 +61,8 @@ development:
 test:
   <<: *default
   database: blog_app
+  username: postgres
+  password: post
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

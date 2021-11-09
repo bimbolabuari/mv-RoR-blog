@@ -4,13 +4,14 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = Post.joins(:author).where(author: { id: @user.id }).order(created_at: :desc)
-    @comments = Comment.order(created_at: :desc)
+    @comments = Comment.includes(:author).order(created_at: :desc)
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
-    @comments = Comment.order(created_at: :desc)
+    @post = @user.post.includes(:comment)
+    @comments = Comment.includes(:author).order(created_at: :desc)
   end
 
   def new
@@ -33,4 +34,5 @@ class PostsController < ApplicationController
       redirect_to root_path
     end
   end
+ end
 end
