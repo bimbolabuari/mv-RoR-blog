@@ -28,8 +28,9 @@ class PostsController < ApplicationController
         flash.now[:error] = 'Error: Post could not be saved'
         render :new, locals: { post: @post }
       end
-      else
+    else
       flash.now[:error] = 'Error: Please sign up to make a posts.'
       redirect_to root_path
     end
+  end
 end
