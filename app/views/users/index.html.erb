@@ -1,4 +1,13 @@
 <ul class="user-index">
+<% if @user %>
+Logged in as <%= @user.name %>
+      <button> <%= link_to 'Logout', '/users/sign_out', method: :delete %></button>
+
+<% end %>
+<% if !@user %>
+   <button> <%= link_to 'Sign Up', '/users/sign_up' %></button>
+      <button> <%= link_to 'Login', '/users/sign_in' %></button>
+<% end %>
   <% @users.each do |user| %>
     <li class="list">
       <p class="photo"><%= user.photo %> </p>
