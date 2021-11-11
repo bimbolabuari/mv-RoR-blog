@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Post index page', js: true, type: :system do
+RSpec.describe 'Post index page', js: true, type: :feature do
   before(:all) do
     @first_user = User.create(name: 'Abimbola', photo: 'photos',
                               bio: 'Biography of Abimbola',
