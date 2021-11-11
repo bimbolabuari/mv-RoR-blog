@@ -11,8 +11,28 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <% if user_signed_in? %>
+  <div class='user-signed-in-options'>
+    <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'logout-btn'  %>
+    <%= button_to "Edit user", edit_user_registration_path, method: :get, class: 'edit-user-btn'  %>
+  </div>
+<% end %>
+<% flash.each do |type, msg| %>
+  <% if type == 'notice' %>
+    <div class="flash-notice">
+      <%= msg %>
+    </div>
+  <% end %>
+  <% if type == 'error' %>
+    <div class="flash-error">
+      <%= msg %>
+    </div>
+  <% end %>
+  <% if type == 'alert' %>
+    <div class="flash-error">
+      <%= msg %>
+    </div>
+  <% end %>
     <%= yield %>
   </body>
 </html>
