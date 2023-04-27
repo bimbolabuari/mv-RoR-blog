@@ -1,7 +1,3 @@
-// Place all the styles related to the blog_users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +28,7 @@
   justify-content: space-between;
 }
 
-.no_of_posts {
+.no-of-posts-posts {
   align-items: flex-end;
 }
 
@@ -43,21 +39,21 @@
 .show-user-recent-posts {
   border: 3px solid #aaa;
   margin-bottom: 18px;
-  padding: 0 18px 0 18px;
+  padding: 0 18px;
 }
 
 .show-section {
   display: flex;
   flex-wrap: wrap;
   width: 81%;
-  margin: 45px auto 45px auto;
+  margin: 45px auto;
 }
 
 .show-bio {
   flex-basis: 100%;
   border: 3px solid #aaa;
   margin-top: 18px;
-  padding: 0 18px 0 18px;
+  padding: 0 18px;
 }
 
 .flex {
